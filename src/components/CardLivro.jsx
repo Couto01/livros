@@ -4,8 +4,10 @@ import { HeartIcon } from '@heroicons/react/24/solid'
 import { HeartIcon as HeartIconOutline } from '@heroicons/react/24/outline'
 
 export default function CardLivro({livro}){
-    const [ favorito, setFavorito ] = useState(false) // hooks
-    const image_url = livro.thumbnail_url
+    const [ favorito, setFavorito ] = useState(false) 
+    
+    const image_url = `https://covers.openlibrary.org/b/id/${livro.cover_id}-M.jpg`;
+
 
     useEffect(() => {
         let favoritos = JSON.parse( localStorage.getItem("favoritos") ) || []
