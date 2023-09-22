@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255; /* Cor do texto (branco) */
+  --background-start-rgb: 0, 128, 0; /* Cor de fundo inicial (verde) */
+  --background-end-rgb: 0, 128, 0; /* Cor de fundo final (verde) */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0; /* Cor do texto (branco) */
+    --background-start-rgb: 255, 255, 255; /* Cor de fundo inicial (verde) */
+    --background-end-rgb: 255, 255, 255; /* Cor de fundo final (branco) */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
