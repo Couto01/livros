@@ -3,7 +3,7 @@ import Titulo from "@/components/Titulo";
 
 async function carregarLivros() {
   const response = await fetch(
-    "https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&format=json"
+    "https://openlibrary.org/api/booksformat=json"
   );
   const json = await response.json();
   console.log(json);
