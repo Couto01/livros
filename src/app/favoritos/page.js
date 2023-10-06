@@ -11,7 +11,7 @@ import { useNavigation } from "next/navigation";
 //     console.log(livros);
 //     return Favoritos || [];
 //   }
-// }
+// };;
 
 export default function Favoritos() {
 	const livros = JSON.parse(localStorage.getItem("favoritos")) || [];
