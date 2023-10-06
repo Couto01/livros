@@ -14,7 +14,7 @@ export default function Login(){
 
     function login(e){
         e.preventDefault()
-        if (email === "joao@fiap.com.br" && senha === "123"){
+        if (email === "teste@teste.com" && senha === "123"){
             serverLogin()
             push("/")
         }else{
@@ -34,7 +34,7 @@ export default function Login(){
             </aside>
 
             <main className="container m-auto max-w-md p-6">
-                <h1 className="text-xl font-bold">Fiap Filmes</h1>
+                <h1 className="text-xl font-bold">Booker</h1>
                 <form onSubmit={login} className="flex flex-col">
                     <label htmlFor="email">E-mail</label>
                     <input 
@@ -54,7 +54,7 @@ export default function Login(){
                         onChange={e => setSenha(e.target.value)}
                     />
 
-                    <button className="bg-pink-600 p-2 mt-2 rounded">entrar</button>
+                    <button className="bg-green-600 p-2 mt-2 rounded">entrar</button>
 
                 </form>
             </main>

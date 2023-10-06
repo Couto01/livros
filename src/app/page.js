@@ -28,6 +28,7 @@ export default async function Home() {
     <>
       <nav className="justify-center flex items-end gap-4 bg-green-700 p-4">
         <h1 className="text-3xl font-bold">Booker</h1>
+
         <a href="/favoritos">favoritos</a>
       </nav>
 
@@ -38,6 +39,7 @@ export default async function Home() {
           <CardLivro livro={livro} />
         ))}
       </section>
+      
 
       <Titulo>lançamentos</Titulo>
     </>
