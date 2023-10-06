@@ -39,9 +39,6 @@ export default async function Home() {
           <CardLivro livro={livro} />
         ))}
       </section>
-      
-
-      <Titulo>lançamentos</Titulo>
     </>
   );
 }

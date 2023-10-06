@@ -1,17 +1,20 @@
+"use cliet"
+
 import CardLivro from "@/components/CardLivro";
 import Titulo from "@/components/Titulo";
+import localStorage from "local-storage";
+import { useNavigation } from "next/navigation";
 
-async function carregarLivros(favoritos) {
-  const response = await fetch(
-    `https://openlibrary.org/search.json?q=${favoritos}`
-  );
-  const json = await response.json();
-  console.log(json);
-  return json.docs;
+function carregarLivros() {
+  if (typeof window !== 'undefined') {
+    const livros = JSON.parse(localStorage.getItem('favoritos'));
+    console.log(livros);
+    return Favoritos || [];
+  }
 }
 
-export default async function Favoritos() {
-  const livros = await carregarLivros();
+export default function Favoritos() {
+  const livros = carregarLivros();
   console.log(livros);
 
   return (
@@ -25,8 +28,8 @@ export default async function Favoritos() {
       <Titulo>Favoritos</Titulo>
 
       <section className="flex flex-wrap gap-2">
-        {livros.map((favoritos) => (
-          <CardLivro livro={favoritos} />
+        {livros.map((livro) => (
+          <CardLivro livro={livro} />
         ))}
       </section>
     </>
