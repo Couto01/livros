@@ -4,6 +4,7 @@ import CardLivro from "@/components/CardLivro";
 import Titulo from "@/components/Titulo";
 import { useState } from "react";
 import { useNavigation } from "next/navigation";
+import getFavoritos from "@/actions/storage";
 
 // function carregarLivros() {
 //   if (typeof window !== 'undefined') {
@@ -14,8 +15,7 @@ import { useNavigation } from "next/navigation";
 // };;
 
 export default function Favoritos() {
-	const livros = JSON.parse(localStorage.getItem("favoritos")) || [];
-	console.log(livros);
+	const livros = getFavoritos();
 
 	return (
 		<>
