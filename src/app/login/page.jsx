@@ -4,7 +4,7 @@ import Image from "next/image";
 import loginimage from "@/images/login.jpg"
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { toast } from "react-hot-toast";
+import { Toaster, toast } from "react-hot-toast";
 import { serverLogin } from "@/actions/auth";
 
 export default function Login(){
@@ -58,6 +58,7 @@ export default function Login(){
 
                 </form>
             </main>
+            <Toaster />
         </div>
     )
 }
