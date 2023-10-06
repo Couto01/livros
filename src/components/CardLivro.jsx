@@ -49,9 +49,6 @@ export default function CardLivro({livro}){
             <span className="font-bold text-lg w-full line-clamp-1 text-center">
                 {livro.title}
             </span>
-            <a href="#" className="bg-green-600 w-full rounded text-center py-1 hover:bg-green-900">
-                saiba mais
-            </a>
         </div>
     )
 }
